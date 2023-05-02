@@ -19,6 +19,7 @@ const Selection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5vh 0;
   opacity: 1;
   @media screen and (max-width: 1279px) {
     flex-direction: column;
@@ -196,6 +197,27 @@ export const AnimatedProject = forwardRef<HTMLDivElement, Props>(
             )
             .to('.close-content-container', {
               x: '-0.4vw',
+              opacity: 1,
+            })
+            .reverse()
+        })
+        responsiveAnimation.add('(min-width:1440px', () => {
+          tl.current = gsap
+            .timeline()
+            .to(imageContainerRef.current, {
+              xPercent: -90,
+              height: '35vh',
+            })
+            .to(
+              contentRef.current,
+              {
+                opacity: 1,
+                xPercent: 30,
+              },
+              '<'
+            )
+            .to('.close-content-container', {
+              x: '-1vw',
               opacity: 1,
             })
             .reverse()

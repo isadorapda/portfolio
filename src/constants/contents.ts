@@ -13,6 +13,7 @@ import { IconType } from 'react-icons'
 import RecipesProject from '../assets/ProjectsImages/recipesWebApp.webp'
 import WeatherForecastProject from '../assets/ProjectsImages/weatherForecast.webp'
 import Portfolio from '../assets/ProjectsImages/portfolio.webp'
+import Pokemon from '../assets/ProjectsImages/pokemon-app.webp'
 
 export const ABOUT_ME = {
   professionHeadline: `Front-end developer`,
@@ -20,7 +21,7 @@ export const ABOUT_ME = {
   I have a BSc and an MSc degree in Dietetics and in Public Health, respectively. While I enjoyed helping others with their health and wellness goals, I found that the work didn't fully challenge me. It was time to rethink what I should be doing.</p>`,
   mainSecondPart: `<span class="highlight">Changing careers is scary. </span> However, I have always trusted that anything can be learned and improved with <span class="highlight">practice, persistence, and willingness.</span> <p class="paragraphs">
   I was introduced to the software development world by a software engineer, who was willing to guide me through the process.</p>
-  <p class="paragraphs">Coding has been a game changer in my life. It keeps me motivated and focused.</p>`,
+  <p class="paragraphs">Coding has been a game changer in my life. It keeps me motivated and focused. My main goal is to become a full-stack software engineer.</p>`,
   skillsTech: [
     'React',
     'TailwindCSS',
@@ -31,6 +32,7 @@ export const ABOUT_ME = {
     'Styled-components',
     'Responsive Design',
   ],
+  currentLearning: ['Node.js', 'Fastify', 'Zod'],
   skillsTransferable: `A great advantage of changing careers is the set of <span class="highlight"> transferable skills</span>. In my context, these include excellent <span class="highlight">interpersonal communication, creativity in problem-solving, analytical thinking, and strong time-management abilities</span>. I believe that these skills will help me to become a more effective and well-rounded developer, and I am always looking for ways to leverage them in my work.`,
   contacts: {
     mobile: '+44 7306560444',
@@ -40,7 +42,7 @@ export const ABOUT_ME = {
   personalInfos: [
     {
       label: 'Nationality',
-      value: 'Brazilian',
+      value: 'Brazilian/ Italian',
     },
     { label: 'Location', value: 'London' },
     { label: 'Pronouns', value: 'she/her' },
@@ -59,7 +61,7 @@ export interface Project {
   stack: Array<Stack>
   image: string
   linkGithub: string
-  url: string
+  url?: string
 }
 
 export const PROJECTS_DESCRIPTION: Array<Project> = [
@@ -159,5 +161,38 @@ export const PROJECTS_DESCRIPTION: Array<Project> = [
     image: `${Portfolio}`,
     linkGithub: 'https://github.com/isadorapda/',
     url: '#homepage',
+  },
+  {
+    id: uuidv4(),
+    title: 'Pokemon - Still Developing',
+    description: `With this app, users can browse through an extensive list of Pokemons, capture them, and store them in their Pokedex. The app features a user-friendly design with pagination to make browsing through the list of Pokemons a breeze. Users can easily navigate through the pages and search for their favorite Pokemon. Users can also access each Pokemon's detailed information. This includes its name, type, abilities, stats, and evolution details.`,
+    skills:
+      'Pagination, React, React Custom Hooks, React Context, TS, Handling asynchronous requests from public API, Manipulating data, TailwindCSS, GreenSock, Vite, Github Actions, UI/UX, Responsive design, Figma',
+    stack: [
+      {
+        name: 'Vite',
+        icon: IconVite,
+      },
+      {
+        name: 'TypeScript',
+        icon: IconTS,
+      },
+      {
+        name: 'React',
+        icon: IconReact,
+      },
+      {
+        name: 'Tailwind',
+        icon: IconTailwind,
+      },
+
+      {
+        name: 'GreenSock',
+        icon: IconGSAP,
+      },
+    ],
+
+    image: `${Pokemon}`,
+    linkGithub: 'https://github.com/isadorapda/pokemon-web-app',
   },
 ]

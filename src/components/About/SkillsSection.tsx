@@ -27,6 +27,9 @@ const SectionWrapper = styled(Wrapper)`
 const Technologies = styled.div`
   padding: 25vh 0 10vh;
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
   @media screen and (max-width: 1023px) {
     width: 100%;
     padding: 5vh 0 0;
@@ -60,6 +63,24 @@ const Technologies = styled.div`
       color: ${({ theme }) => theme.tertiaryColor};
     }
   }
+  .current-learning {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3vw;
+    h2 {
+      font-family: ${({ theme }) => theme.fontSecondary};
+      font-size: 2vw;
+    }
+    .current-learning-list {
+      display: flex;
+      gap: 1.5vw;
+
+      .icon-arrow {
+        color: ${({ theme }) => theme.tertiaryColor};
+      }
+    }
+  }
 `
 const TransferableSkills = styled.div`
   font-family: ${({ theme }) => theme.fontPrimary};
@@ -86,7 +107,7 @@ const OtherInfos = styled.div`
   display: flex;
   flex-direction: column;
   width: 40%;
-  gap: 5vh;
+  gap: 20vh;
   @media screen and (max-width: 1023px) {
     width: 100%;
     padding-bottom: 7vh;
@@ -127,21 +148,30 @@ export function SkillsSection() {
           end: ' center bottom',
         }
       )
-      gsap.from('.tech-name', {
-        y: 50,
-        stagger: 0.3,
-        ease: 'back',
-        opacity: 0,
-        duration: 2,
-
-        scrollTrigger: {
-          trigger: '.tech-skills-grid',
-          start: 'top bottom',
-          end: 'bottom bottom-=28%',
-          scrub: 1,
-          toggleActions: 'play reset play restart',
-        },
-      })
+      gsap
+        .timeline({ defaults: { ease: 'back', opacity: 0, duration: 2 } })
+        .from('.animate-tech', {
+          y: 50,
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: '.tech-skills-grid',
+            start: 'top bottom',
+            end: 'bottom bottom-=28%',
+            scrub: 1,
+            toggleActions: 'play reset play restart',
+          },
+        })
+        .from('.animate-learning-tech', {
+          y: 50,
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: '.current-learning',
+            start: 'bottom bottom',
+            end: 'bottom bottom-=28%',
+            scrub: 1,
+            toggleActions: 'play reset play restart',
+          },
+        })
     }, skillsRef)
     return () => ctx.revert()
   }, [])
@@ -154,11 +184,25 @@ export function SkillsSection() {
       <Technologies>
         <div className="tech-skills-grid">
           {ABOUT_ME.skillsTech.map((tech) => (
-            <h3 className="tech-name" key={tech}>
+            <h3 className="tech-name animate-tech" key={tech}>
               <IconArrow aria-hidden="true" className="icon-arrow" />
               {tech}
             </h3>
           ))}
+        </div>
+        <div className="current-learning">
+          <h2>Currently Learning:</h2>
+          <div className="current-learning-list">
+            {ABOUT_ME.currentLearning.map((tech, index) => (
+              <p
+                key={`${tech}-${index}`}
+                className="tech-name animate-learning-tech"
+              >
+                <IconArrow aria-hidden="true" className="icon-arrow" />
+                {tech}
+              </p>
+            ))}
+          </div>
         </div>
       </Technologies>
       <OtherInfos>
