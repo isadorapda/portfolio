@@ -22,7 +22,8 @@ export const ContentProjectsContainer = styled.div`
   font-family: ${({ theme }) => theme.fontPrimary};
   font-size: ${({ theme }) => theme.textBody};
   line-height: ${({ theme }) => theme.lineHightBody};
-  margin-bottom: 3vh;
+  margin-bottom: 5vh;
+
   @media screen and (max-width: 1279px) {
     display: block;
     padding: 5vh 10vw;
@@ -50,7 +51,10 @@ export const ContentProjectsContainer = styled.div`
     cursor: pointer;
     opacity: 0;
     z-index: 15;
-    left: 0.8vw;
+    left: 0vw;
+    @media screen and (max-width: 1439px) {
+      left: 0.8vw;
+    }
     @media screen and (max-width: 1279px) {
       display: none;
     }

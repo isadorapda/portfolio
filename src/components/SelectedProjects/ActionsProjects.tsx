@@ -46,14 +46,16 @@ export function ActionsProjects({ project }: ActionsProjectProps) {
           <IconGithub className="actions-icons" style={{ cursor: 'pointer' }} />
         </a>
       </button>
-      <button type="button" className="button-action-project">
-        <a href={project.url} target="_blank">
-          <IconURLLink
-            className="actions-icons"
-            style={{ cursor: 'pointer' }}
-          />
-        </a>
-      </button>
+      {project.url ? (
+        <button type="button" className="button-action-project">
+          <a href={project.url} target="_blank">
+            <IconURLLink
+              className="actions-icons"
+              style={{ cursor: 'pointer' }}
+            />
+          </a>
+        </button>
+      ) : null}
     </ActionsProject>
   )
 }
