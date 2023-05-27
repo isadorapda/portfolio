@@ -100,7 +100,8 @@ export function Contacts() {
         <div className="call-to-action">
           <h4 className="cta-header">Have my work attracted your attention?</h4>
           <p className="cta-paragraph">
-            Are you looking for a junior front-end developer who has a{' '}
+            Are you looking for a junior front-end/ full-stack developer who has
+            a{' '}
             <strong>
               proactive approach, a positive attitude to challenges and changes,
               learns fast and is actively learning new technologies, is

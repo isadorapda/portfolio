@@ -17,6 +17,7 @@ const Background = styled.div`
   width: 100vw;
   justify-content: center;
   position: relative;
+  gap: 3vh;
   .text {
     width: 90vw;
     height: 11vw;
@@ -62,7 +63,7 @@ const Header = styled.div`
       font-weight: 300;
     }
     .intro-title {
-      font-size: 14vw;
+      font-size: 13vw;
       margin: 0;
       font-weight: 400;
     }
@@ -100,12 +101,12 @@ export function Home() {
     <SectionWrapper id="homepage" ref={homeContainer}>
       <Background>
         <div className="text">
-          {'front'.split('').map((char, index) => (
+          {'full'.split('').map((char, index) => (
             <div key={`${char}-${index}`}>{char}</div>
           ))}
         </div>
         <div className="text">
-          {'-end'.split('').map((char, index) => (
+          {'-stack'.split('').map((char, index) => (
             <div key={`${char}-${index}`}>{char}</div>
           ))}
         </div>
