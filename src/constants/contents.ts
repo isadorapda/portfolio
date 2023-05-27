@@ -7,6 +7,10 @@ import {
   SiGreensock as IconGSAP,
   SiReactrouter as IconRouter,
   SiWebpack as IconWbpack,
+  SiVitest as IconVitest,
+  SiNodedotjs as IconNode,
+  SiPrisma as IconPrisma,
+  SiDocker as IconDocker,
 } from 'react-icons/si'
 import { TbBrandVite as IconVite } from 'react-icons/tb'
 import { IconType } from 'react-icons'
@@ -14,10 +18,11 @@ import RecipesProject from '../assets/ProjectsImages/recipesWebApp.webp'
 import WeatherForecastProject from '../assets/ProjectsImages/weatherForecast.webp'
 import Portfolio from '../assets/ProjectsImages/portfolio.webp'
 import Pokemon from '../assets/ProjectsImages/pokemon-app.webp'
+import PetAdoption from '../assets/ProjectsImages/adopt-pet.webp'
 
 export const ABOUT_ME = {
-  professionHeadline: `Front-end developer`,
-  mainFirstPart: `<p class="paragraphs">Hi there! My name is Isadora, and I am a front-end developer based in London. I started studying JavaScript on my own in July 2022, and I am now working hard to build my skills and knowledge through self-teaching and mentorship.</p><p class="paragraphs">
+  professionHeadline: `Full-stack developer`,
+  mainFirstPart: `<p class="paragraphs">Hi there! My name is Isadora, and I am a software developer based in London. I started studying JavaScript on my own in July 2022, and I am now working hard to build my skills and knowledge through self-teaching and mentorship.</p><p class="paragraphs">
   I have a BSc and an MSc degree in Dietetics and in Public Health, respectively. While I enjoyed helping others with their health and wellness goals, I found that the work didn't fully challenge me. It was time to rethink what I should be doing.</p>`,
   mainSecondPart: `<span class="highlight">Changing careers is scary. </span> However, I have always trusted that anything can be learned and improved with <span class="highlight">practice, persistence, and willingness.</span> <p class="paragraphs">
   I was introduced to the software development world by a software engineer, who was willing to guide me through the process.</p>
@@ -26,6 +31,10 @@ export const ABOUT_ME = {
     'React',
     'TailwindCSS',
     'TypeScript',
+    'Node.js',
+    'Prisma',
+    'Zod',
+    'Fastify',
     'HTML',
     'JavaScript',
     'CSS',
@@ -185,7 +194,6 @@ export const PROJECTS_DESCRIPTION: Array<Project> = [
         name: 'Tailwind',
         icon: IconTailwind,
       },
-
       {
         name: 'GreenSock',
         icon: IconGSAP,
@@ -194,5 +202,49 @@ export const PROJECTS_DESCRIPTION: Array<Project> = [
 
     image: `${Pokemon}`,
     linkGithub: 'https://github.com/isadorapda/pokemon-web-app',
+  },
+  {
+    id: uuidv4(),
+    title: 'Find a Pet - Still Developing',
+    description: `A full-stack web app to connect pet seekers with organisations offereng pets for adoption. Organisations can create an account to register their pets for adoption. Pet seekers can search for pets based on their location, pet type, gender, size, and other filters. Users can also access each pet's detailed information and connect to the organisation via WhatsApp to make enquires about the pet.`,
+    skills:
+      'Pagination, Node.js, Prisma, Fastify, Zod, Docker, React, React Custom Hooks, React Context, TS, Manipulating data, TailwindCSS, Vite, Vitest, Github Actions, UI/UX, Responsive design',
+    stack: [
+      {
+        name: 'Vite',
+        icon: IconVite,
+      },
+      {
+        name: 'TypeScript',
+        icon: IconTS,
+      },
+      {
+        name: 'React',
+        icon: IconReact,
+      },
+      {
+        name: 'Tailwind',
+        icon: IconTailwind,
+      },
+
+      {
+        name: 'Vitest',
+        icon: IconVitest,
+      },
+      {
+        name: 'Node.js',
+        icon: IconNode,
+      },
+      {
+        name: 'Prisma',
+        icon: IconPrisma,
+      },
+      {
+        name: 'Docker',
+        icon: IconDocker,
+      },
+    ],
+    image: `${PetAdoption}`,
+    linkGithub: 'https://github.com/isadorapda/pet-adoption-api',
   },
 ]

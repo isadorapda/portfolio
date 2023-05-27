@@ -161,17 +161,6 @@ export function SkillsSection() {
             toggleActions: 'play reset play restart',
           },
         })
-        .from('.animate-learning-tech', {
-          y: 50,
-          stagger: 0.3,
-          scrollTrigger: {
-            trigger: '.current-learning',
-            start: 'bottom bottom',
-            end: 'bottom bottom-=28%',
-            scrub: 1,
-            toggleActions: 'play reset play restart',
-          },
-        })
     }, skillsRef)
     return () => ctx.revert()
   }, [])
@@ -189,20 +178,6 @@ export function SkillsSection() {
               {tech}
             </h3>
           ))}
-        </div>
-        <div className="current-learning">
-          <h2>Currently Learning:</h2>
-          <div className="current-learning-list">
-            {ABOUT_ME.currentLearning.map((tech, index) => (
-              <p
-                key={`${tech}-${index}`}
-                className="tech-name animate-learning-tech"
-              >
-                <IconArrow aria-hidden="true" className="icon-arrow" />
-                {tech}
-              </p>
-            ))}
-          </div>
         </div>
       </Technologies>
       <OtherInfos>
