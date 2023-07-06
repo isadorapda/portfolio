@@ -11,7 +11,7 @@ import { headersAnimations } from '../../utils/animations/headersAnimations'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const CV_URL = 'https://github.com/isadorapda/portfolio/blob/main/CVIsadoraPilauDeAlmeida.pdf?raw=true'
+const CV_URL = 'https://github.com/isadorapda/portfolio/blob/main/IsadoraPilauDeAlmeida_CV.pdf?raw=true'
 
 const SectionWrapper = styled(Wrapper)`
   justify-content: center;
