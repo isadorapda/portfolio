@@ -8,9 +8,10 @@ import { ABOUT_ME } from '../../constants/contents'
 import { parallaxSection } from '../../utils/animations/parallaxSection'
 import { SectionHeaders, Wrapper } from '../../styles/globalStyles'
 import { headersAnimations } from '../../utils/animations/headersAnimations'
-import pdfCV from '../../assets/cv.pdf'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const CV_URL = 'https://github.com/isadorapda/portfolio/blob/main/CVIsadoraPilauDeAlmeida.pdf?raw=true'
 
 const SectionWrapper = styled(Wrapper)`
   justify-content: center;
@@ -185,7 +186,7 @@ export function SkillsSection() {
           <Markup tagName="div" content={ABOUT_ME.skillsTransferable} />
         </TransferableSkills>
         <Curriculum>
-          <a href={pdfCV} target="_blank" className="download-cv-button">
+          <a href={CV_URL} target="_blank" className="download-cv-button">
             Download my CV
           </a>
         </Curriculum>
