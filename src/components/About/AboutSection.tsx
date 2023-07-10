@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import { Markup } from 'interweave'
 import { RiArrowDropRightFill as IconArrow } from 'react-icons/ri'
 import styled from 'styled-components'
 import { gsap } from 'gsap'
@@ -9,6 +8,7 @@ import { SectionHeaders, Wrapper } from '../../styles/globalStyles'
 import { headersAnimations } from '../../utils/animations/headersAnimations'
 import MyPhoto from '../../assets/my-photo.webp'
 import { parallaxSection } from '../../utils/animations/parallaxSection'
+import { MainContentAboutSection } from './MainContent'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -86,30 +86,7 @@ const PhotoContainer = styled.div`
     }
   }
 `
-const MainContent = styled.div`
-  font-family: ${({ theme }) => theme.fontPrimary};
-  color: ${({ theme }) => theme.contrastPrimaryColor};
-  font-size: ${({ theme }) => theme.textBody};
-  line-height: ${({ theme }) => theme.lineHightBody};
-  padding: 20vh 3vw 5vh 0;
-  width: 50vw;
-  @media screen and (max-width: 1023px) {
-    width: 100%;
-    padding: 0 0 0;
-    font-size: ${({ theme }) => theme.textBodyMobile};
-    line-height: ${({ theme }) => theme.lineHightBodyMobile};
-  }
-  .paragraphs {
-    margin-bottom: 12px;
-  }
-  .highlight {
-    color: ${({ theme }) => theme.tertiaryColor};
-    font-size: 18px;
-    @media screen and (max-width: 430px) {
-      font-size: ${({ theme }) => theme.textBody};
-    }
-  }
-`
+
 export function AboutSection() {
   const aboutRef = useRef()
   const photoRef = useRef<HTMLDivElement | null>(null)
@@ -174,10 +151,7 @@ export function AboutSection() {
           ))}
         </div>
       </PhotoContainer>
-      <MainContent>
-        <Markup tagName="div" content={ABOUT_ME.mainFirstPart} />
-        <Markup tagName="div" content={ABOUT_ME.mainSecondPart} />
-      </MainContent>
+      <MainContentAboutSection />
     </SectionWrapper>
   )
 }

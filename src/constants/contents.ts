@@ -22,11 +22,15 @@ import PetAdoption from '../assets/ProjectsImages/adopt-pet.webp'
 
 export const ABOUT_ME = {
   professionHeadline: `Full-stack developer`,
-  mainFirstPart: `<p class="paragraphs">Hi there! My name is Isadora, and I am a software developer based in London. I started studying JavaScript on my own in July 2022, and I am now working hard to build my skills and knowledge through self-teaching and mentorship.</p><p class="paragraphs">
-  I have a BSc and an MSc degree in Dietetics and in Public Health, respectively. While I enjoyed helping others with their health and wellness goals, I found that the work didn't fully challenge me. It was time to rethink what I should be doing.</p>`,
-  mainSecondPart: `<span class="highlight">Changing careers is scary. </span> However, I have always trusted that anything can be learned and improved with <span class="highlight">practice, persistence, and willingness.</span> <p class="paragraphs">
-  I was introduced to the software development world by a software engineer, who was willing to guide me through the process.</p>
-  <p class="paragraphs">Coding has been a game changer in my life. It keeps me motivated and focused. My main goal is to become a full-stack software engineer.</p>`,
+  firstParagraph:{
+    heading:"Who I am now and what I am enthusiast about",
+    paragraphContent:`<p class="paragraphs">Over the past year, I have been actively involved in coding using technologies such as <span class="highlight">TypeScript, ReactJS, and more recently Node.js</span>. I am enthusiastic about the potential to leverage these technologies to build innovative applications that positively impact people’s lives and the opportunity to make meaningful impact through code.
+    My passion for coding was ignited during my master’s dissertation while searching for ways to improve the statistical analysis. I became deeply interested in the code that powered the tests and calculations of the software that I was using.</p>`
+  },
+  secondParagraph:{
+    heading: "Who I was and why I changed",
+    paragraphContent:`<p class="paragraphs">I hold a BSc degree in Dietetics and an MSc degree in Public Health. While I enjoyed helping others with their health and wellness goals, I found that the work didn't fully challenge me. I soon realised that pursuing additional courses to supplement the lack of challenges in my career as a dietitian was only a short-term solution. It was time for me to explore new avenues of helping people and making a difference. Whether it involves creating user-friendly applications, contributing to open-source projects, or using technology to address global challenges. I am ready to embark on this journey with enthusiasm and commitment.</p>`
+  },
   skillsTech: [
     'React',
     'TailwindCSS',
@@ -40,9 +44,10 @@ export const ABOUT_ME = {
     'CSS',
     'Styled-components',
     'Responsive Design',
+    'unit/ e2e/ integration testing',
   ],
-  currentLearning: ['Node.js', 'Fastify', 'Zod'],
-  skillsTransferable: `A great advantage of changing careers is the set of <span class="highlight"> transferable skills</span>. In my context, these include excellent <span class="highlight">interpersonal communication, creativity in problem-solving, analytical thinking, and strong time-management abilities</span>. I believe that these skills will help me to become a more effective and well-rounded developer, and I am always looking for ways to leverage them in my work.`,
+  currentLearning: ['Next.js', 'Fastify', 'Zod'],
+  skillsTransferable: `A great advantage of changing careers is the set of <span class="highlight"> transferable skills</span>. In my context, these include excellent <span class="highlight">interpersonal communication, creativity in problem-solving, analytical thinking, and strong time-management abilities</span>. I believe that these skills will help me to become a more effective and well-rounded developer.I am constantly pushing myself to learn more and expand my digital toolset, and thrive within environments which encourage high standards and quality output.`,
   contacts: {
     mobile: '+44 7306560444',
     emailAddress: 'isadorapda@gmail.com',
