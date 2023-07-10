@@ -48,7 +48,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "gsap": "^3.12.1",
+    "gsap": "^3.12.2",
     "imagemin-webp": "^8.0.0",
     "interweave": "^13.1.0",
     "lodash.debounce": "^4.0.8",
