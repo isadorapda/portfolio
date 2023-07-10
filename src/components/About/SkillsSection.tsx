@@ -11,7 +11,8 @@ import { headersAnimations } from '../../utils/animations/headersAnimations'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const CV_URL = 'https://github.com/isadorapda/portfolio/blob/main/IsadoraPilauDeAlmeida_CV.pdf?raw=true'
+const CV_URL =
+  'https://github.com/isadorapda/portfolio/blob/main/IsadoraPilauDeAlmeida_CV.pdf?raw=true'
 
 const SectionWrapper = styled(Wrapper)`
   justify-content: center;
@@ -40,7 +41,7 @@ const Technologies = styled.div`
     grid-template-columns: repeat(2, minmax(auto, 1fr));
     grid-template-rows: auto;
     justify-items: start;
-    gap: 3vw;
+    gap: 2vw;
     @media screen and (max-width: 1023px) {
       align-items: center;
       width: 100%;
@@ -50,11 +51,14 @@ const Technologies = styled.div`
     font-family: ${({ theme }) => theme.fontSecondary};
     color: ${({ theme }) => theme.contrastPrimaryColor};
     opacity: 1;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 300;
     display: flex;
     text-align: start;
     align-items: center;
+    @media screen and (max-width: 1023px) {
+      font-size: ${({ theme }) => theme.textBody};
+    }
     @media screen and (max-width: 430px) {
       font-size: 17px;
       line-height: ${({ theme }) => theme.lineHightBody};
@@ -88,6 +92,16 @@ const TransferableSkills = styled.div`
   font-size: ${({ theme }) => theme.textBody};
   line-height: ${({ theme }) => theme.lineHightBody};
   color: ${({ theme }) => theme.contrastPrimaryColor};
+  h3 {
+    margin-bottom: 15px;
+    color: ${({ theme }) => theme.contrastPrimaryColor};
+    font-family: ${({ theme }) => theme.fontTertiary};
+    font-weight: ${({ theme }) => theme.weightHeaders};
+    font-size: 1.5vw;
+    @media screen and (max-width: 1023px) {
+      font-size: ${({ theme }) => theme.textHeaderSmall};
+    }
+  }
   .paragraphs {
     margin-bottom: 12px;
   }
@@ -108,10 +122,14 @@ const OtherInfos = styled.div`
   display: flex;
   flex-direction: column;
   width: 40%;
-  gap: 20vh;
+  padding: 25vh 0 10vh;
+  gap: 10vh;
+  /* .additional-infos {
+    opacity: 0;
+  } */
   @media screen and (max-width: 1023px) {
     width: 100%;
-    padding-bottom: 7vh;
+    padding: 0 0;
     align-items: center;
   }
 `
@@ -149,19 +167,30 @@ export function SkillsSection() {
           end: ' center bottom',
         }
       )
-      gsap
-        .timeline({ defaults: { ease: 'back', opacity: 0, duration: 2 } })
-        .from('.animate-tech', {
-          y: 50,
-          stagger: 0.3,
-          scrollTrigger: {
-            trigger: '.tech-skills-grid',
-            start: 'top bottom',
-            end: 'bottom bottom-=28%',
-            scrub: 1,
-            toggleActions: 'play reset play restart',
-          },
-        })
+      gsap.from('.animate-tech', {
+        y: 50,
+        stagger: 0.3,
+        opacity: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.tech-skills-grid',
+          start: 'top bottom',
+          end: 'bottom bottom-=28%',
+          scrub: 1,
+          toggleActions: 'play reset play restart',
+        },
+      })
+      gsap.from('.additional-infos', {
+        yPercent: 20,
+        duration: 2,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: '.beyond-tech',
+          start: 'top center',
+          end: 'bottom bottom-=10%',
+          scrub: 2,
+        },
+      })
     }, skillsRef)
     return () => ctx.revert()
   }, [])
@@ -181,8 +210,9 @@ export function SkillsSection() {
           ))}
         </div>
       </Technologies>
-      <OtherInfos>
-        <TransferableSkills>
+      <OtherInfos className="additional-infos">
+        <TransferableSkills className="beyond-tech">
+          <h3>Beyond tech...</h3>
           <Markup tagName="div" content={ABOUT_ME.skillsTransferable} />
         </TransferableSkills>
         <Curriculum>
