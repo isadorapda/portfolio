@@ -11,36 +11,41 @@ import {
   SiNodedotjs as IconNode,
   SiPrisma as IconPrisma,
   SiDocker as IconDocker,
+  SiNextdotjs as IconNext,
+  SiPrismic as IconPrismic,
+  SiSass as IconSass,
+  SiStripe as IconStripe,
+  SiFauna as IconFauna,
 } from 'react-icons/si'
 import { TbBrandVite as IconVite } from 'react-icons/tb'
 import { IconType } from 'react-icons'
 import RecipesProject from '../assets/ProjectsImages/recipesWebApp.webp'
 import WeatherForecastProject from '../assets/ProjectsImages/weatherForecast.webp'
 import Portfolio from '../assets/ProjectsImages/portfolio.webp'
-import Pokemon from '../assets/ProjectsImages/pokemon-app.webp'
+import ReactNews from '../assets/ProjectsImages/react-news.webp'
 import PetAdoption from '../assets/ProjectsImages/adopt-pet.webp'
 
 export const ABOUT_ME = {
   professionHeadline: `Full-stack developer`,
-  firstParagraph:{
-    heading:"Who I am now and what I am enthusiast about",
-    paragraphContent:`<p class="paragraphs">Over the past year, I have been actively involved in coding using technologies such as <span class="highlight">TypeScript, ReactJS, and more recently Node.js</span>. I am enthusiastic about the potential to leverage these technologies to build innovative applications that positively impact people’s lives and the opportunity to make meaningful impact through code.
-    My passion for coding was ignited during my master’s dissertation while searching for ways to improve the statistical analysis. I became deeply interested in the code that powered the tests and calculations of the software that I was using.</p>`
+  firstParagraph: {
+    heading: 'Who I am now and what I am enthusiast about',
+    paragraphContent: `<p class="paragraphs">Over the past year, I have been actively involved in coding using technologies such as <span class="highlight">TypeScript, ReactJS, and more recently Node.js</span>. I am enthusiastic about the potential to leverage these technologies to build innovative applications that positively impact people’s lives and the opportunity to make meaningful impact through code.
+    My passion for coding was ignited during my master’s dissertation while searching for ways to improve the statistical analysis. I became deeply interested in the code that powered the tests and calculations of the software that I was using.</p>`,
   },
-  secondParagraph:{
-    heading: "Who I was and why I changed",
-    paragraphContent:`<p class="paragraphs">I hold a BSc degree in Dietetics and an MSc degree in Public Health. While I enjoyed helping others with their health and wellness goals, I found that the work didn't fully challenge me. I soon realised that pursuing additional courses to supplement the lack of challenges in my career as a dietitian was only a short-term solution. It was time for me to explore new avenues of helping people and making a difference. Whether it involves creating user-friendly applications, contributing to open-source projects, or using technology to address global challenges. I am ready to embark on this journey with enthusiasm and commitment.</p>`
+  secondParagraph: {
+    heading: 'Who I was and why I changed',
+    paragraphContent: `<p class="paragraphs">I hold a BSc degree in Dietetics and an MSc degree in Public Health. While I enjoyed helping others with their health and wellness goals, I found that the work didn't fully challenge me. I soon realised that pursuing additional courses to supplement the lack of challenges in my career as a dietitian was only a short-term solution. It was time for me to explore new avenues of helping people and making a difference. Whether it involves creating user-friendly applications, contributing to open-source projects, or using technology to address global challenges. I am ready to embark on this journey with enthusiasm and commitment.</p>`,
   },
   skillsTech: [
-    'React',
-    'TailwindCSS',
+    'React/ Next.js',
     'TypeScript',
+    'JavaScript',
     'Node.js',
     'Prisma',
     'Zod',
     'Fastify',
-    'HTML',
-    'JavaScript',
+    'React Query',
+    'TailwindCSS',
     'CSS',
     'Styled-components',
     'Responsive Design',
@@ -176,38 +181,7 @@ export const PROJECTS_DESCRIPTION: Array<Project> = [
     linkGithub: 'https://github.com/isadorapda/',
     url: '#homepage',
   },
-  {
-    id: uuidv4(),
-    title: 'Pokemon - Still Developing',
-    description: `With this app, users can browse through an extensive list of Pokemons, capture them, and store them in their Pokedex. The app features a user-friendly design with pagination to make browsing through the list of Pokemons a breeze. Users can easily navigate through the pages and search for their favorite Pokemon. Users can also access each Pokemon's detailed information. This includes its name, type, abilities, stats, and evolution details.`,
-    skills:
-      'Pagination, React, React Custom Hooks, React Context, TS, Handling asynchronous requests from public API, Manipulating data, TailwindCSS, GreenSock, Vite, Github Actions, UI/UX, Responsive design, Figma',
-    stack: [
-      {
-        name: 'Vite',
-        icon: IconVite,
-      },
-      {
-        name: 'TypeScript',
-        icon: IconTS,
-      },
-      {
-        name: 'React',
-        icon: IconReact,
-      },
-      {
-        name: 'Tailwind',
-        icon: IconTailwind,
-      },
-      {
-        name: 'GreenSock',
-        icon: IconGSAP,
-      },
-    ],
 
-    image: `${Pokemon}`,
-    linkGithub: 'https://github.com/isadorapda/pokemon-web-app',
-  },
   {
     id: uuidv4(),
     title: 'Find a Pet - Still Developing',
@@ -251,5 +225,41 @@ export const PROJECTS_DESCRIPTION: Array<Project> = [
     ],
     image: `${PetAdoption}`,
     linkGithub: 'https://github.com/isadorapda/pet-adoption-api',
+  },
+  {
+    id: uuidv4(),
+    title: 'React News',
+    description: `A web app with news about React. Users can easily log in using their GitHub accounts and authenticated through Next Auth. The application includes a subscription feature, integrating with Stripe, granting subscribers access to in-depth articles. Non-subscribes can still access content previews. This can improve SEO, since search engines crawl and index content previews. The application utilises Fauna as its database, while Prismic serves as the CMS for the creation and delivery of contents.`,
+    skills:
+      'Next.js (App folder), TypeScript, Zod, Stripe, FaunaDB, NextAuth, CMS (Prismic), Sass',
+    stack: [
+      {
+        name: 'Next.js',
+        icon: IconNext,
+      },
+      {
+        name: 'TypeScript',
+        icon: IconTS,
+      },
+      {
+        name: 'Sass',
+        icon: IconSass,
+      },
+
+      {
+        name: 'Prismic',
+        icon: IconPrismic,
+      },
+      {
+        name: 'Stripe',
+        icon: IconStripe,
+      },
+      {
+        name: 'Fauna',
+        icon: IconFauna,
+      },
+    ],
+    image: `${ReactNews}`,
+    linkGithub: 'https://github.com/isadorapda/react-news-next-app',
   },
 ]
