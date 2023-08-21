@@ -13,7 +13,7 @@
     "@babel/preset-env": "^7.22.10",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
-    "@svgr/webpack": "^8.0.1",
+    "@svgr/webpack": "^8.1.0",
     "@swc/core": "^1.3.76",
     "@testing-library/dom": "^9.3.1",
     "@testing-library/react": "^14.0.0",
