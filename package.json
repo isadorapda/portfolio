@@ -22,7 +22,7 @@
     "@types/lodash.debounce": "^4.0.7",
     "@types/node": "^20.5.9",
     "@types/react-dom": "^18.2.7",
-    "@types/styled-components": "^5.1.26",
+    "@types/styled-components": "^5.1.27",
     "@types/uuid": "^9.0.3",
     "@types/webpack": "^5.28.2",
     "@types/webpack-dev-server": "^4.7.2",
