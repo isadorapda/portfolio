@@ -24,7 +24,7 @@
     "@types/react-dom": "^18.2.7",
     "@types/styled-components": "^5.1.27",
     "@types/uuid": "^9.0.4",
-    "@types/webpack": "^5.28.2",
+    "@types/webpack": "^5.28.3",
     "@types/webpack-dev-server": "^4.7.2",
     "babel-loader": "^9.1.3",
     "babel-plugin-file-loader": "^2.0.0",
