@@ -23,7 +23,7 @@
     "@types/node": "^20.8.10",
     "@types/react-dom": "^18.2.14",
     "@types/styled-components": "^5.1.29",
-    "@types/uuid": "^9.0.6",
+    "@types/uuid": "^9.0.7",
     "@types/webpack": "^5.28.4",
     "@types/webpack-dev-server": "^4.7.2",
     "babel-loader": "^9.1.3",
