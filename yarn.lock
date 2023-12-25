@@ -4151,10 +4151,10 @@ for-each@^0.3.3:
   dependencies:
     is-callable "^1.1.3"
 
-fork-ts-checker-notifier-webpack-plugin@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/fork-ts-checker-notifier-webpack-plugin/-/fork-ts-checker-notifier-webpack-plugin-7.0.0.tgz#96901e5e18b599cbd26f4182a45c1a3aa4df355d"
-  integrity sha512-sVjH3Zl8VTxhtOw33z/kOCte7xBkEpBHcj/8KPohZBtD+w/fJrDuep3m0j4xHCFZH34cECErqh+YqKTTbwp3Ew==
+fork-ts-checker-notifier-webpack-plugin@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/fork-ts-checker-notifier-webpack-plugin/-/fork-ts-checker-notifier-webpack-plugin-8.0.0.tgz#cc2b28171729c5c851ca398c20dacd03a42d2aa9"
+  integrity sha512-rQQ8X/rT+DZfk25C3P3/fwZQf8Zws6h12POloaxwnGCO9V1ZEBZ9ypJX1vDXgnf4xjT3tQ+COgFGG5njCzxpNg==
   dependencies:
     node-notifier "^10.0.1"
 
