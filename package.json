@@ -38,7 +38,7 @@
     "mini-css-extract-plugin": "^2.7.7",
     "react-svg-loader": "^3.0.3",
     "style-loader": "^3.3.4",
-    "swc-loader": "^0.2.3",
+    "swc-loader": "^0.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "typings-for-css-modules-loader": "^1.7.0",
