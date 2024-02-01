@@ -29,7 +29,7 @@ export const ABOUT_ME = {
   professionHeadline: `Full-stack developer`,
   firstParagraph: {
     heading: 'Who I am now and what I am enthusiast about',
-    paragraphContent: `<p class="paragraphs">Over the past year, I have been actively involved in coding using technologies such as <span class="highlight">TypeScript, ReactJS, and more recently Node.js</span>. I am enthusiastic about the potential to leverage these technologies to build innovative applications that positively impact people’s lives and the opportunity to make meaningful impact through code.
+    paragraphContent: `<p class="paragraphs">Over the past year, I have been actively involved in coding using technologies such as <span class="highlight">TypeScript, ReactJS, and Node.js</span>. I am enthusiastic about the potential to leverage these technologies to build innovative applications that positively impact people’s lives and the opportunity to make meaningful impact through code.
     My passion for coding was ignited during my master’s dissertation while searching for ways to improve the statistical analysis. I became deeply interested in the code that powered the tests and calculations of the software that I was using.</p>`,
   },
   secondParagraph: {
@@ -41,9 +41,10 @@ export const ABOUT_ME = {
     'TypeScript',
     'JavaScript',
     'Node.js',
+    'Nest.js',
     'Prisma',
     'Zod',
-    'Fastify',
+    'Fastify/ Express',
     'React Query',
     'TailwindCSS',
     'CSS',

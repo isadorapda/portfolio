@@ -27,7 +27,7 @@ export default function App() {
       <Home />
       <About />
       <SelectedProjects />
-      <Contacts />
+      {/* <Contacts /> */}
       <Footer />
     </Wrapper>
   )
