@@ -11,7 +11,7 @@
   "devDependencies": {
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
-    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-react": "^7.24.1",
     "@babel/preset-typescript": "^7.23.3",
     "@svgr/webpack": "^8.1.0",
     "@swc/core": "^1.4.2",
