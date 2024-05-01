@@ -40,7 +40,7 @@
     "style-loader": "^3.3.4",
     "swc-loader": "^0.2.6",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.3",
+    "typescript": "^5.4.5",
     "typings-for-css-modules-loader": "^1.7.0",
     "webp-loader": "^0.6.0",
     "webpack": "^5.91.0",
