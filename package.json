@@ -35,7 +35,7 @@
     "fork-ts-checker-webpack-plugin": "^9.0.2",
     "html-webpack-plugin": "^5.6.0",
     "jest": "^29.7.0",
-    "mini-css-extract-plugin": "^2.8.1",
+    "mini-css-extract-plugin": "^2.9.0",
     "react-svg-loader": "^3.0.3",
     "style-loader": "^3.3.4",
     "swc-loader": "^0.2.6",
